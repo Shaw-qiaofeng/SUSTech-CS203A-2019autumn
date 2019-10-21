@@ -1,0 +1,168 @@
+Problems{
+
+    A{How Many substrings
+        Description{
+            Give you a string, you should print how many none empty substrings it has.
+        }
+        Input{
+            The first line is number of tests. T (1 <= T <= 10)
+            The second line is a string S. The length of S doesn’t exceed 1000, that is |S| <= 1000
+            S will only contain lower case English letters.
+            Example{
+                1
+                hello
+            }
+        }
+        Output{
+            For each test, you should print an integer in a single line, which is the number of none empty substrings of S.
+            Example{
+                15
+            }
+        }
+    }
+
+    B{Matching problem
+        Description{
+            Hong haves two strings s and t. The length of the string s equals n, the length of the string t equals m. The string s consists of lowercase letters and at most one wildcard character '*', while the string t consists only of lowercase letters.
+            The wildcard character '*' in the string s (if any) can be replaced with an arbitrary sequence (possibly void sequence) of lowercase letters. If it is possible to replace a wildcard character '*' in s to obtain a string t, then the string t matches the pattern s.
+            If the given string t matches the given string s, print "YES", otherwise print "NO".
+        }
+        Input{
+            The first line will be an integer T (1≤T≤10), which is the number of test cases. For each test data:
+            The first line contains two integers n and m (1≤n, m≤2⋅10^5) — the length of the string s and the length of the string t, respectively.
+            The second line contains string s of length n, which consists of lowercase letters and at most one wildcard character '*'.
+            The third line contains string t of length m, which consists only of lowercase letters.
+            Example{
+                1
+                7 10
+                aba*aba
+                abazzzzaba
+            }
+        }
+        Output{
+            For each test cases, print "YES" (without quotes), if you can obtain the string t from the string s. Otherwise print "NO" (without quotes).
+            Example{
+                YES
+            }
+        }
+    }
+
+    
+
+    C{Repear!
+        Description{
+            Amayama finds that some "repeaters" have joined the computer science group. 
+            However, these people seem to update to the unordinary repeaters who only repeat part of the last sentence. 
+            Now, Amayama published some sentences in the group, and he wishes you to check out the number of "repeaters" who repeat him. 
+            He believes that if a person publishes a sentence that contains the prefix of the last one sentence, 
+            and this prefix is at least one-third the length of the last sentence (round up, e.g. for 100 then at least 34), then he is a "repeater".
+        }
+        Input{
+            The first line contains a number N, which is the number of suspicious accounts. (1<=N<=1000) Then there are 2*N lines. 
+            The 2*i-1 line is a string s, which is the sentence published by Amayama. (1<=|s|<=10000) 
+            The 2*i line is a string p, which is the sentence published by a suspicious account. (1<=|p|<=10000)
+            Example{
+                2 
+                lanranwudi 
+                lanranwudi 
+                aaa
+                bbcc
+            }
+        }
+        Output{
+            The output contains an integer, which is the number of repeaters.
+            Example{
+                1
+            }
+        }
+    }
+
+    D{Necklace!
+        Description{
+            D1rtyPaw5 wants to drink coco with his girlfriend! Unfortunately, he has no girlfriend now, but he still wishes to prepare a necklace for his future goddess.  
+            This is a kind of special necklace which contains a sequence of diamonds with letters in, and it can be regarded as a string. 
+            D1rtyPaw5 gives Amayama a semi-finished necklace and askes Amayama to add as few as possible diamonds to the head or tail of the necklace to make the necklace consist of at least two same circulation sections. 
+            A circulation section of a string is a substring which could build the original string by repeating the circulation section several times.  
+            Please answer the number of diamonds that Amayama should add.
+        }
+        Input{
+            The first line contains an integer n, which is the number of test cases. (1<=n<=1000) 
+            For each case, there is only one line of string containing lowercase letters, which indicates the semi-finished necklace.  
+            The length of each string is no more than 200000.
+            Example{
+                2
+                wawawa
+                failed
+            }
+        }
+        Output{
+            The output for each test case is an integer which is the number of diamonds that Amayama should add.
+            Example{
+                0
+                6
+            }
+        }
+    }
+
+    E{Stick!
+        Description{
+            Lovely boys often play stick game. This is a two-player game, 
+            which goal is finding the longest common substring of the two players' names, 
+            and the length of it is defined as the stick level. 
+            Now, Amayama wants you help him to calculate the stick level between two boys.
+        }
+        Input{
+            The input contains two string s1, s2 (1<=|s1|,|s2|<=100000), which are two lovely boys' names.
+            Example{
+                B.Tang
+                B.Tarjan
+            }
+        }
+        Output{
+            A number stands the sticking level
+            Example{
+                4
+            }
+        }
+    }
+
+    F{Resque!
+        Description{
+            Special spy Oken was caught by the defenders of Narnal country. 
+            Before he got caught, Oken tries to send a half-encrypted message to his friend, 
+            Secsip. However, due to the obstruction of Amayama, some part of the message was broken. 
+            Secsip knows that Oken's original message is a string, 
+            and he also knows the first half of the original message is an encryption of the second half using substitution cipher. 
+            The substitution cipher is a method of encrypting 
+            which replaces each letter in a string to another corresponding fixed letter in a bijection table which is known by Secsip. 
+            Now, Secsip receives the broken message, 
+            and he knows a suffix (which length could be 0) of the second half of the original message has been lost.  
+            He wishes to recover this lost suffix as short as possible.  
+            A suffix of a string is a substring which ends with the last letter.
+        }
+        Input{
+            The first line is the code table for the substitution cipher, 
+            which contains 26 letters representing the encrypted letter for each letter in lexicographical order. 
+            The second line is a string which is the Oken's broken message. 
+            The length of the string is no longer than 500000.
+            All letters in this problem is in lowercase. 
+            Example{
+                b c d e f g h i j k l m n o p q r s t u v w x y z a
+                bcdeabc
+            }
+        }
+        Output{
+            An integer which stands the length of second half of Oken's original message with the lost suffix as short as possible.
+            Example{
+                4
+            }
+        }
+        Hint{
+            For the sample input, 
+            the strategy which can recover the second half of the original message as short as possible 
+            is to add a "d" at the end of the broken message, 
+            so that the second half "abcd" can be encrypted to the first half "bcde" using the given encryption table. 
+        }
+
+    }
+}
